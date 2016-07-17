@@ -1,0 +1,78 @@
+\usepackage{xparse}
+\DeclareDocumentCommand{\entry}{ O{} O{} m m m m} {
+  \newglossaryentry{gls-#3}{name={#5},text={#5\glsadd{#3}},
+    description={#6},#1
+  }
+  \makeglossaries
+  \newacronym[see={[Siehe:]{gls-#3}},#2]{#3}{#4}{#5\glsadd{gls-#3}}
+}
+
+
+\newglossaryentry{defacement}
+{
+  name=Defacement,
+  description={(engl. für „Entstellung“ oder „Verunstaltung“) bezeichnet das unberechtigte Verändern einer Website}
+}
+
+\newglossaryentry{frontend}
+{
+	name=Front End,
+    description={die der Öffentlichkeit zugänglichen Internetseiten}
+}
+
+\newglossaryentry{backend}
+{
+	name=Back End,
+    description={die Administrationsoberfläche zum Erstellen und Pflegen von Inhalten einer Webseite}
+}
+
+\newglossaryentry{unix}
+{
+	name=UNIX,
+    description={universell einsetzbares, besonders leistungsfähiges Betriebssystem}
+}
+
+\newglossaryentry{linux}
+{
+	name=Linux,
+    description={freies Betriebssystem, das \gls{unix} basierend ist}
+}
+
+\newglossaryentry{widget}
+{
+	name=Widget,
+    description={kleines Computerprogramm, das in ein anderes Programm integriert wird, besonders als Teil einer grafischen Benutzeroberfläche}
+}
+
+\newglossaryentry{zip}
+{
+	name=ZIP,
+    description={ein Format für verlustfrei komprimierte Dateien}
+}
+
+\newglossaryentry{opensource}
+{
+	name={Open Source},
+    description={Software bezeichnet, deren Quelltext öffentlich und von Dritten eingesehen werden kann}
+}
+
+\entry{pixel}{px}{Pixel}{von Picture Element, Bildelement}{}
+\entry{tinymce}{TinyMCE}{Tiny Moxiecode Content Editor}{Editor für Webanwendungen}
+\entry{ip}{IP}{Internet Protocol}{in Computernetzen weit verbreitetes Netzwerkprotokoll, stellt die Grundlage des Internets dar}
+\entry{php}{PHP}{PHP: Hypertext Preprocessor}{eine Skriptsprache, die hauptsächlich zur Erstellung dynamischer Webseiten oder Webanwendungen verwendet wird}
+\entry{html}{HTML}{Hypertext Markup Language}{eine textbasierte Auszeichnungssprache zur Strukturierung digitaler Dokumente wie Texte mit Hyperlinks, Bildern und anderen Inhalten}
+\entry{css}{CSS}{Cascade Style Sheet}{eine Computersprache für die Gestaltung digitaler, vorwiegend Web-basierter Dokumente}
+\entry{cms}{CMS}{Content Management System}{eine Software zur gemeinschaftlichen Bearbeitung von ''Inhalten'' (Content), zumeist in Webseiten}
+\entry{sql}{SQL}{Structured Query Language}{eine Datenbanksprache zur Definition von Datenstrukturen in relationalen Datenbanken sowie zum Bearbeiten (Einfügen, Verändern, Löschen) und Abfragen von darauf basierenden Datenbeständen}
+\entry{http}{HTTP}{Hypertext Transfer Protocol}{ein Anwendungsprotokoll zur Übertragung von Daten über ein Netzwerk}
+\entry{iis}{IIS}{Internet Information Services}{ein erweiterbarer Webserver für Windows}
+\entry{rss}{RSS}{Rich Site Summary}{eine Technologie zum Abonnement von Webseiten-Inhalten}
+\entry{www}{WWW}{World Wide Web}{ein über das Internet abrufbares System von elektronischen Hypertext-Dokumenten}
+\entry{ldap}{LDAP}{Lightweight Directory Access Protocol}{ein Netzwerkprotokoll zur Abfrage und Änderung von Informationen verteilter Verzeichnisdienste}
+\entry{gif}{GIF}{Grafics Interchange Format}{ein Grafikformat für Bilder mit Farbpalette}
+\entry{png}{PNG}{Portable Network Graphics}{en Grafikformat, das als Ersatz für das Format GIF entworfen wurde}
+\entry{wysiwyg}{WYSIWIG}{What You See Is What You Get}{bei WYSIWYG wird ein Dokument während der Bearbeitung am Bildschirm genauso angezeigt, wie es bei der Ausgabe über ein anderes Gerät, z. B. einen Drucker, aussieht}
+\entry{ftp}{FTP}{File Transfer Protocol}{ein Netzwerkprotokoll zur Dateiübertragung}
+\entry{pdf}{PDF}{Portable Document Format}{ein plattformunabhängiges Dateiformat für Dokumente}
+\entry{rwd}{RWD}{responsives Webdesign}{ein gestalterisches und technisches Muster zur Erstellung von Websites, so dass diese auf Eigenschaften des jeweils benutzten Endgeräts, vor allem Smartphones und Tabletcomputer, reagieren können}
+\entry{url}{URL}{Uniform Resource Locator}{identifiziert und lokalisiert eine Ressource, beispielsweise eine Website über die zu verwendende Zugriffsmethode (zum Beispiel das verwendete Netzwerkprotokoll wie \acrshort{http} oder \acrshort{ftp}) und den Ort der Ressource in Computernetzwerken}
